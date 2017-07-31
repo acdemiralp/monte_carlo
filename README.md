@@ -1,7 +1,9 @@
-##### Getting Started
+#### Getting Started
 - Copy monte_carlo.hpp to your project.
-##### Example Usage 
+
+#### Example Usage 
 - Estimating Pi:
+
     ```cpp
     // Template arguments are the data type and the random number type.
     monte_carlo<double, double> pi_estimator(
