@@ -19,7 +19,7 @@
             // Calculate distance from the origin.
             auto distance = sqrtf(x * x + y * y);
       
-            // If the point is within the quarter circle, append 1.0F.
+            // If the point is within the quarter circle, append 1.0.
             return distance <= 1.0 ? 1.0 : 0.0;
         },
         // Reduction function (optional). Provides two data type values 
@@ -34,5 +34,5 @@
     auto pi = pi_estimator.simulate(30000);
     
     // Multiply by 4 to exterpolate the quarter circle to the full circle.
-    pi *= 4.0F;
+    pi *= 4.0;
     ```
