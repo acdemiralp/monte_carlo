@@ -1,5 +1,4 @@
-#ifndef MONTE_CARLO_HPP_
-#define MONTE_CARLO_HPP_
+#pragma once
 
 #include <algorithm>
 #include <functional>
@@ -24,7 +23,7 @@ public:
   monte_carlo& operator=(const monte_carlo&  that) = default;
   monte_carlo& operator=(      monte_carlo&& temp) = default;
 
-  data_type simulate(const std::size_t& sampling_count)
+  data_type simulate(const std::size_t sampling_count)
   {
     std::random_device                       random_device   ;
     std::mt19937                             mersenne_twister(random_device());
@@ -55,5 +54,3 @@ protected:
   std::function<data_type(const std::function<rng_type()>&)>   sampling_function_ ;
   std::function<data_type(const data_type&, const data_type&)> reduction_function_;
 };
-
-#endif
